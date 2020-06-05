@@ -5,12 +5,13 @@ metadata:
     app: ms-proxy
   name: ms-proxy
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: "80"
     port: 80
     targetPort: 80
   selector:
     app: ms-proxy
+  loadBalancerIP: "34.120.4.126"
 status:
   loadBalancer: {}
