@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: ms-proxy
+  name: ms-proxy
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: ms-proxy
+    spec:
+      containers:
+      - image: ms-proxy
+        name: ms-proxy
+        ports:
+        - containerPort: 80
+      restartPolicy: Always
+status: {}
