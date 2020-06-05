@@ -5,6 +5,7 @@ metadata:
     app: ms-proxy
   name: ms-proxy
 spec:
+  type: NodePort
   ports:
   - name: "80"
     port: 80
