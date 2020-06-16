@@ -1,5 +1,6 @@
-FROM nginx:alpine
+FROM linuxserver/letsencrypt
 
-COPY config/* /etc/nginx/conf.d/
+COPY config/* /config/nginx/site-confs/
 
 EXPOSE 80
+EXPOSE 443

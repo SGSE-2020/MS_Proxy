@@ -17,5 +17,17 @@ spec:
         name: ms-proxy
         ports:
         - containerPort: 80
+        - containerPort: 443
+        env:
+          - name: TZ
+            value: "Europe/London"
+          - name: URL
+            value: "portal.dvess.network"
+          - name: VALIDATION
+            value: "http"
+          - name: EXTRA_DOMAINS
+            value: "bank.dvess.network,buergerbuero.dvess.network,fitnesscenter.dvess.network,hausarzt.dvess.network,krankenhaus.dvess.network,opnv.dvess.network,ordnungsamt.dvess.network,parkplatz.dvess.network,rabbitmq.dvess.network,restaurants.dvess.network,rettungsdienst.dvess.network,strassenverkehrsamt.dvess.network,supermarkt.dvess.network,tierarzt.dvess.network"
+          - name: STAGING
+            value: "false" # set true for debugging
       restartPolicy: Always
 status: {}
