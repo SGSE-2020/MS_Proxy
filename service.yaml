@@ -20,6 +20,4 @@ spec:
   selector:
     app: ms-proxy
 status:
-  loadBalancer:
-    ingress:
-    - ip: 34.78.233.184
+  loadBalancer: {}
